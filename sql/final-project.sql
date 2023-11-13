@@ -56,3 +56,5 @@ CREATE TABLE notifications (
     PRIMARY KEY (id),
     FOREIGN KEY (user_id) REFERENCES users(id)
 );
+
+SELECT * FROM users
