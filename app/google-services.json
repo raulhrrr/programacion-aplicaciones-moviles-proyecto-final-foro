@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "215710025644",
+    "project_id": "final-project-forum",
+    "storage_bucket": "final-project-forum.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:215710025644:android:bf891e0e0f69cebb549c09",
+        "android_client_info": {
+          "package_name": "com.uniagustiniana.proyecto_final_foro"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMrSkL5I-xFwd7sOx0dl6NPfUBS_DNuls"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

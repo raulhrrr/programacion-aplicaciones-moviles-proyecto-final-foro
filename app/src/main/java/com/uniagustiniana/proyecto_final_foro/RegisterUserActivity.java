@@ -1,49 +1,50 @@
 package com.uniagustiniana.proyecto_final_foro;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.uniagustiniana.proyecto_final_foro.dto.User;
-import com.uniagustiniana.proyecto_final_foro.services.UserApiImpl;
+import com.google.firebase.auth.FirebaseAuth;
+import com.uniagustiniana.proyecto_final_foro.utils.Common;
 
 public class RegisterUserActivity extends AppCompatActivity {
-
-    private UserApiImpl userService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_user);
-
-        userService = new UserApiImpl();
-
-        Button btnRegister = findViewById(R.id.btnRegister);
-        btnRegister.setOnClickListener(this::registerUser);
-
+        setup();
     }
 
-    private void registerUser(View view) {
+    private void setup() {
+        Button btnRegister = findViewById(R.id.btnRegister);
+        btnRegister.setOnClickListener(v -> {
+            TextView email = findViewById(R.id.txtRegisterEmail);
+            TextView password = findViewById(R.id.txtRegisterPassword);
 
-        TextView name = findViewById(R.id.txtUser);
-        TextView lastname = findViewById(R.id.txtLastname);
-        TextView age = findViewById(R.id.txtAge);
-        TextView email = findViewById(R.id.txtEmail);
-        TextView username = findViewById(R.id.txtRegisterUser);
-        TextView password = findViewById(R.id.txtRegisterPassword);
+            if (!email.getText().toString().isEmpty() && !password.getText().toString().isEmpty()) {
+                FirebaseAuth.getInstance().createUserWithEmailAndPassword(email.getText().toString(), password.getText().toString())
+                        .addOnCompleteListener(task -> {
+                            if (task.isSuccessful()) {
+                                goToLoginActivity();
+                            } else {
+                                Common.showAlert("Error al registrar el usuario", this);
+                            }
+                        });
+            } else {
+                email.setError("El email es requerido");
+                password.setError("La contraseña es requerida");
+            }
+        });
+    }
 
-        User user = new User();
-        user.setName(name.getText().toString());
-        user.setLastname(lastname.getText().toString());
-        user.setAge(Integer.valueOf(age.getText().toString()));
-        user.setEmail(email.getText().toString());
-        user.setUsername(username.getText().toString());
-        user.setPassword(password.getText().toString());
-
-        userService.registerUser(user, this);
+    private void goToLoginActivity() {
+        Intent intent = new Intent(this, LogInActivity.class);
+        startActivity(intent);
     }
 
 }
