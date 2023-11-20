@@ -2,14 +2,22 @@ package com.uniagustiniana.proyecto_final_foro.dto;
 
 public class User {
 
+    private String uid;
     private String name;
     private String lastname;
     private Integer age;
     private String email;
-    private String user;
     private String password;
 
     public User() {
+    }
+
+    public String getUid() {
+        return uid;
+    }
+
+    public void setUid(String uid) {
+        this.uid = uid;
     }
 
     public String getName() {
@@ -44,14 +52,6 @@ public class User {
         this.email = email;
     }
 
-    public String getUsername() {
-        return user;
-    }
-
-    public void setUsername(String user) {
-        this.user = user;
-    }
-
     public String getPassword() {
         return password;
     }
@@ -59,5 +59,4 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
-
 }

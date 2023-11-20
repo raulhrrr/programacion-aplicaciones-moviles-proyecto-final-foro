@@ -4,48 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterUserActivity">
+    tools:context=".UserConfigurationActivity">
 
     <EditText
-        android:id="@+id/txtRegisterPassword"
+        android:id="@+id/txtEmailUpdate"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="16dp"
-        android:ems="10"
-        android:inputType="text|textVisiblePassword"
-        app:layout_constraintBottom_toTopOf="@+id/btnRegister"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="32dp"
-        android:text="@string/password"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtRegisterPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtRegisterEmail" />
-
-    <EditText
-        android:id="@+id/txtRegisterEmail"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="8dp"
         android:ems="10"
         android:inputType="text|textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/textView8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -60,14 +28,14 @@
         android:layout_marginEnd="32dp"
         android:text="@string/email"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtRegisterEmail"
+        app:layout_constraintBottom_toTopOf="@+id/txtEmailUpdate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtAge" />
+        app:layout_constraintTop_toBottomOf="@+id/txtAgeUpdate" />
 
     <EditText
-        android:id="@+id/txtAge"
+        android:id="@+id/txtAgeUpdate"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -90,14 +58,14 @@
         android:layout_marginEnd="32dp"
         android:text="@string/age"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtAge"
+        app:layout_constraintBottom_toTopOf="@+id/txtAgeUpdate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtLastname" />
+        app:layout_constraintTop_toBottomOf="@+id/txtLastnameUpdate" />
 
     <EditText
-        android:id="@+id/txtName"
+        android:id="@+id/txtNameUpdate"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -112,7 +80,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/txtLastname"
+        android:id="@+id/txtLastnameUpdate"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
@@ -135,23 +103,11 @@
         android:layout_marginEnd="32dp"
         android:text="@string/surname"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtLastname"
+        app:layout_constraintBottom_toTopOf="@+id/txtLastnameUpdate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtName" />
-
-    <Button
-        android:id="@+id/btnRegister"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="50dp"
-        android:text="@string/register_button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/txtNameUpdate" />
 
     <TextView
         android:id="@+id/textView"
@@ -162,8 +118,23 @@
         android:layout_marginEnd="32dp"
         android:text="@string/name"
         android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtNameUpdate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="50dp"
+        android:text="@string/update_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEmailUpdate" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

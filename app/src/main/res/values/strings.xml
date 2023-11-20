@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">proyecto-final-foro</string>
+
+    <!-- Buttons -->
+    <string name="login_button">Iniciar sesión</string>
+    <string name="register_button">Registrarse</string>
+    <string name="update_button">Actualizar</string>
+
+
+    <!-- Login -->
+    <string name="email">Correo electrónico</string>
+    <string name="password">Contraseña</string>
+
+    <!-- Register -->
+    <string name="name">Nombre</string>
+    <string name="surname">Apellido</string>
+    <string name="age">Edad</string>
+
+    <string name="userConfig">Configuración</string>
+    <string name="logout">Cerrar sesión</string>
 </resources>
