@@ -11,6 +11,10 @@
         android:fontFamily="@font/krub_regular"
         android:title="@string/btnAddGroup" />
     <item
+        android:id="@+id/allGroups"
+        android:fontFamily="@font/krub_regular"
+        android:title="@string/allGroups" />
+    <item
         android:id="@+id/myGroups"
         android:fontFamily="@font/krub_regular"
         android:title="@string/myGroups" />

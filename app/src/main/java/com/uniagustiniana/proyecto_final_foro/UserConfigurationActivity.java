@@ -96,10 +96,10 @@ public class UserConfigurationActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.userConfig) {
-            startActivity(new Intent(this, UserConfigurationActivity.class));
-        } else if (id == R.id.addGroup) {
+        if (id == R.id.addGroup) {
             startActivity(new Intent(this, AddGroupActivity.class));
+        } else if (id == R.id.allGroups) {
+            startActivity(new Intent(this, AllGroupsActivity.class));
         } else if (id == R.id.myGroups) {
             startActivity(new Intent(this, MyGroupsActivity.class));
         } else if (id == R.id.logout) {
