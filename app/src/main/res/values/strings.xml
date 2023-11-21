@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name">proyecto-final-foro</string>
+    <string name="app_name">Proyecto Final Foro</string>
 
     <!-- Buttons -->
-    <string name="login_button">Iniciar sesión</string>
-    <string name="register_button">Registrarse</string>
-    <string name="update_button">Actualizar</string>
-
+    <string name="btnLogin">Iniciar sesión</string>
+    <string name="btnRegister">Registrarse</string>
+    <string name="btnUpdate">Actualizar</string>
+    <string name="btnAddGroup">Añadir grupo</string>
 
     <!-- Login -->
     <string name="email">Correo electrónico</string>
@@ -16,6 +16,20 @@
     <string name="surname">Apellido</string>
     <string name="age">Edad</string>
 
+    <!-- Menu -->
     <string name="userConfig">Configuración</string>
+    <string name="addGroupButton">Añadir grupo</string>
+    <string name="myGroups">Mis grupos</string>
+    <string name="allGroups">Todos los grupos</string>
     <string name="logout">Cerrar sesión</string>
+
+    <!-- Add group -->
+    <string name="uidUser">Uid del usuario</string>
+    <string name="groupName">Nombre del grupo</string>
+    <string name="groupDescription">Descripción del grupo</string>
+    <string name="group_name">Group Name</string>
+    <string name="group_image">group image</string>
+    <string name="group_description">Group description</string>
+    <string name="status">Activo</string>
+
 </resources>

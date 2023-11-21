@@ -39,9 +39,9 @@ public class UserConfigurationActivity extends AppCompatActivity {
     }
 
     private void setup() {
-        users = FirebaseDatabase.getInstance().getReference("Users");
         firebaseAuth = FirebaseAuth.getInstance();
         currentUser = firebaseAuth.getCurrentUser();
+        users = FirebaseDatabase.getInstance().getReference("Users");
 
         txtNameUpdate = findViewById(R.id.txtNameUpdate);
         txtLastnameUpdate = findViewById(R.id.txtLastnameUpdate);
@@ -98,6 +98,10 @@ public class UserConfigurationActivity extends AppCompatActivity {
         int id = item.getItemId();
         if (id == R.id.userConfig) {
             startActivity(new Intent(this, UserConfigurationActivity.class));
+        } else if (id == R.id.addGroup) {
+            startActivity(new Intent(this, AddGroupActivity.class));
+        } else if (id == R.id.myGroups) {
+            startActivity(new Intent(this, MyGroupsActivity.class));
         } else if (id == R.id.logout) {
             Common.logout(this);
         }

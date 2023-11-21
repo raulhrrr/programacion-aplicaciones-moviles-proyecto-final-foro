@@ -42,7 +42,7 @@ public class LogInActivity extends AppCompatActivity {
                     .addOnCompleteListener(task -> {
                         if (task.isSuccessful()) {
                             Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(this, UserConfigurationActivity.class));
+                            startActivity(new Intent(this, MyGroupsActivity.class));
                         } else {
                             Toast.makeText(this, "Error en el inicio de sesión", Toast.LENGTH_SHORT).show();
                         }

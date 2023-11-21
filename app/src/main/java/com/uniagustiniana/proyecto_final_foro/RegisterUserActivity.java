@@ -79,7 +79,7 @@ public class RegisterUserActivity extends AppCompatActivity {
             if (task.isSuccessful()) {
                 Toast.makeText(this, "Usuario registrado exitosamente", Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(this, "Error al registrar el usuario", Toast.LENGTH_SHORT).show();
+                Common.showAlert(ERROR, "Error al agregar el grupo", this);
             }
         });
     }
