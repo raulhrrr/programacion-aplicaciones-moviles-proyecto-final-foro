@@ -14,6 +14,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.uniagustiniana.proyecto_final_foro.dto.Group;
@@ -25,6 +26,7 @@ import java.util.Objects;
 public class AddGroupActivity extends AppCompatActivity {
 
     FirebaseAuth firebaseAuth;
+    FirebaseUser currentUser;
     DatabaseReference databaseReference;
 
     String userUid;
@@ -39,9 +41,10 @@ public class AddGroupActivity extends AppCompatActivity {
 
     private void setup() {
         firebaseAuth = FirebaseAuth.getInstance();
+        currentUser = firebaseAuth.getCurrentUser();
         databaseReference = FirebaseDatabase.getInstance().getReference("Groups");
 
-        userUid = firebaseAuth.getUid();
+        userUid = currentUser.getUid();
         name = findViewById(R.id.groupName);
         description = findViewById(R.id.groupDescription);
 
@@ -53,6 +56,7 @@ public class AddGroupActivity extends AppCompatActivity {
 
     private void addGroup(View view) {
         Group group = new Group();
+        group.setUserUid(userUid);
         group.setName(name.getText().toString());
         group.setDescription(description.getText().toString());
         group.setStatus(Status.ACTIVE.getName());
